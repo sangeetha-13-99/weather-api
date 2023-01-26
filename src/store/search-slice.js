@@ -32,8 +32,8 @@ export const setSearchAction=function(){
             const options = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '3bbfe1d268msh637e1cd74e8888cp1b11d0jsn64dfd4f03ee1',
-                    'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+                    'X-RapidAPI-Key': `${import.meta.env.VITE_KEY}`,
+                    'X-RapidAPI-Host': `${import.meta.env.VITE_HOST}`
                 }
             };
             

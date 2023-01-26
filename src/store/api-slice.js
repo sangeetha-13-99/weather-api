@@ -35,7 +35,15 @@ export const setApi=function(){
         const units=state.api.units;
         const {lat,lon}=state.search.currentLocation;
         const fetchData=async()=>{
-            const response= await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?units=${units}&days=5&lat=${lat}&lon=${lon}&key=95e8353136364d09990b72d3163320c5`);
+
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': `${import.meta.env.VITE_KEY_1}`,
+                    'X-RapidAPI-Host':  `${import.meta.env.VITE_HOST_1}`
+                }
+            };
+            const response= await fetch(`https://weatherbit-v1-mashape.p.rapidapi.com/forecast/daily?days=5&units=${units}&lat=${lat}&lon=${lon}`,options);
             
            if(!response.ok){
                throw new Error('oops api limit has been reached :|');

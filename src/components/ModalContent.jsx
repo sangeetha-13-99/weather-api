@@ -34,7 +34,7 @@ function ModalContent() {
     return (
       <Modal>
         <div onClick={context.closeModal} className="close"><span className="material-symbols-outlined">close</span></div>
-        <div class="search-input">
+        <div className="search-input">
           <label htmlFor="search" ><span className="material-symbols-outlined search-icon">search</span><input id="search" placeholder="search location" ref={inputRef} /></label>
           <Button bg="blue" onClick={searchHandler}>Search</Button>
         </div>
